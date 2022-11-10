@@ -1,19 +1,41 @@
-# Ruby on Replit
+# Introduction to Object Oriented Programming - Text directions, refs and code
 
-This is a template to get you started with Ruby on Replit. It's ready to go so you can just hit run and start coding!
+Object-oriented programming (OOP) is a programming paradigm that uses objects and their interactions to design and program applications
 
-## Running the repl
+- Allows the program to block off areas of code that perform certain tasks independently of other areas in the application.
 
-Simply hit run! You can edit the run command from the `.replit` file.
+## Encapsulation
+concept of blocking off areas of code and not making it available to the rest of the program
 
-## Installing packages
+## Abstraction
+is simplifying a complex process of a program, an enterprise software solution for example by modeling classes appropriate for it
 
-To add packages to your repl, we recommend using the Replit packager interface in the left sidebar or using `bundle install` in the shell. Check out the [Bundle docs here](https://bundler.io/v2.3/#getting-started).
+## Inheritance
+is used where a class inherits the behavior of another class, referred to as the superclass
 
-**Warning: Avoid using `gem install` to add packages.**
+## Polymorphism
+is when a class inherits the behaviors of another class, but has the ability to not inherit everything and change some of it’s inherited behaviors. For example to write a method that does something differently from the inherited method
 
-Beacuse Ruby repls use [Bundle](https://bundler.io/) under the hood to provide a consistent environment that tracks and installs the exact gems and versions needed, we recommend using `bundle install` instead of `gem install`, which may not work as expected.
+## Classes
+It is a blueprint that describes the state and behavior that the objects of the class all share. A class can be used to create many objects. Objects created at runtime from a class are called instances of that particular class.
 
-## Help
+## Example of a user class
 
-If you need help you might be able to find an answer on our [docs](https://docs.replit.com) page. Feel free to report bugs and give us feedback [here](https://replit.com/support).
+`class User
+  attr_accessor :name, :email
+  def initialize(name, email)
+    @name = name
+    @email = email
+  end
+  def run
+    puts "Hey I'm running"
+  end
+  def self.identify_yourself
+    puts "Hey I am a class method"
+  end
+end
+user = User.new("mashrur", "mashrur@example.com")
+user.run
+User.identify_youself # to run this class method you don't need an instance of user 
+                      # you can directly call the class User 
+`
